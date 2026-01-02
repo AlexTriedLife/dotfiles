@@ -1,0 +1,25 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$python\
+$c\
+$line_break\
+$character"""
+
+[directory]
+style = "bold blue"
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+[python]
+symbol = "🐍 "
+format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+style = "bold yellow"
+
+[c]
+symbol = "C "
+style = "bold blue"
+format = "via [$symbol($version )]($style)"
