@@ -13,3 +13,10 @@ map("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous Error" })
 map("n", "]d", vim.diagnostic.goto_next, { desc = "Next Error" })
 map("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show Error Diagnostic" })
 map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open Error List" })
+
+
+-- Telescop
+map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files" })
+map("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
+map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
+map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor" })
