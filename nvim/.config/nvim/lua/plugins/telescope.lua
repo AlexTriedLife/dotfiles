@@ -8,27 +8,16 @@ return {
     },
     config = function()
       local telescope = require("telescope")
-      local actions = require("telescope.actions")
-
+      
       telescope.setup({
         defaults = {
+          preview = { treesitter = false },
           prompt_prefix = " ",
           selection_caret = " ",
           path_display = { "smart" },
-
-          mappings = {
-            i = {
-              ["<C-k>"] = actions.move_selection_previous, -- Move up
-              ["<C-j>"] = actions.move_selection_next,     -- Move down
-              ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-            },
-          },
         },
       })
-
       telescope.load_extension("fzf")
-
-  
     end,
   },
 }

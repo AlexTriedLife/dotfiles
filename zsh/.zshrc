@@ -60,3 +60,10 @@ setopt SHARE_HISTORY
 if [[ ! -f ~/.zsh_plugins.txt ]]; then
     ln -s ~/dotfiles/zsh/.zsh_plugins.txt ~/.zsh_plugins.txt
 fi
+
+. "$HOME/.local/bin/env"
+export PATH="$HOME/.local/bin:$PATH"
+export UV_PYTHON="3.13"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
